@@ -1,4 +1,6 @@
 FROM frolvlad/alpine-glibc
-ADD https://www.dropbox.com/download/?plat=lnx.x86_64 /opt/
-COPY dropbox-link.sh /opt
-CMD ["/opt/dropbox-link.sh"]
+WORKDIR /opt/dropbox
+RUN apk update && apk add --no-cache ca-certificates wget openssl
+RUN wget -O dropbox.tar.gz "https://www.dropbox.com/download/?plat=lnx.x86_64" && tar -xvzf dropbox.tar.gz && rm dropbox.tar.gz
+COPY dropbox-link.sh .
+CMD ["/opt/dropbox/dropbox-link.sh"]
