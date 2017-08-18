@@ -9,7 +9,7 @@ Based on Alpine Linux.
 
 ### Running image:
 ```sh
-$ docker run -it --mac-address="00:00:00:00:00:00" --rm waitxd/dropbox-link
+$ docker run -it --mac-address="02:42:ac:11:00:02" --rm waitxd/dropbox-link
 ```
 Modify (or remove) mac-address parameter according your needs.  
 
