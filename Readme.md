@@ -5,7 +5,7 @@ Based on Alpine Linux.
 
 ## Usage:
 
-### Building image:
+### Running image:
 ```sh
 $ docker run -it --mac-address="00:00:00:00:00:00" --rm waitxd/dropbox-link
 ```
