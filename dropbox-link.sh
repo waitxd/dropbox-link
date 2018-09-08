@@ -9,7 +9,7 @@ fi
 trap 'rm -f "$fifo_name"' EXIT
 
 dir=`dirname $0`
-${dir}/.dropbox-dist/dropboxd > ${fifo_name} &
+${dir}/.dropbox-dist/dropboxd >${fifo_name} 2>/dev/null &
 export APP_PID=$!
 
 while read -r line
